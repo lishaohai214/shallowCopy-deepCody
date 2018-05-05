@@ -24,7 +24,8 @@ object
 在将一个值赋给变量时，解析器必须确定这个值是基本类型还是引用类型值。  
 基本数据类型是按值访问的，因为可以操作保存在变量中的实际的值。  
 
-引用类型的值是保存在内存中的对象。与其他语言不同，javascript 不允许直接访问内存中的位置，也就是说不能直接操作对象的内存空间。  
+引用类型的值是保存在内存中的对象。
+与其他语言不同，javascript 不允许直接访问内存中的位置，也就是说不能直接操作对象的内存空间。  
 在操作对象时，实际上是在操作对象的引用而不是实际对象。  
 ```
 ```
@@ -194,6 +195,7 @@ jQuery.extend([deep], target, object,object1,[objectN]);
 </body>
 ```
 #### 7-利用 JSON 深拷贝
+```html
 <body>
     <script>
         var test = {a:'a', b: {q:[1, 2, 3],b:'b'}} 
@@ -206,4 +208,4 @@ jQuery.extend([deep], target, object,object1,[objectN]);
         
     </script>
 </body>
-
+```

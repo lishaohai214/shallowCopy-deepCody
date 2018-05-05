@@ -206,4 +206,3 @@ jQuery.extend([deep], target, object,object1,[objectN]);
 ```
 
 ---------------------
-[对象的深拷贝和浅拷贝的答案](https://blog.csdn.net/nate__river/article/details/79177292)

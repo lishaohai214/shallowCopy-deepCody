@@ -1,17 +1,12 @@
 
-[今天他们遇到的 数组的深拷贝和浅拷贝 的答案](https://www.jianshu.com/p/8d4fa84c8b14  )
----------------------
-[对象的深拷贝和浅拷贝的答案](https://blog.csdn.net/nate__river/article/details/79177292)
-
----------------------
-
 [深拷贝和浅拷贝的理解](https://www.zhihu.com/question/23031215 )
+---------------------
 
 ### javasript 中的深拷贝和浅拷贝？  
-
+```text
 对于这个问题，可以考虑从深拷贝和浅拷贝的使用或者起源说起，  
 也就是为什么会出现这个问题？  
-
+```
 ### 首先了解一些 javascript 的基本知识  
 ```
 1. javascript变量包含两种不同的数据类型的值：基本数据类型和引用数据类型。  
@@ -209,3 +204,6 @@ jQuery.extend([deep], target, object,object1,[objectN]);
     </script>
 </body>
 ```
+
+---------------------
+[对象的深拷贝和浅拷贝的答案](https://blog.csdn.net/nate__river/article/details/79177292)

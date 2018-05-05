@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>深拷贝 </title>
+</head>
+<body>
+    <script>
+        function deepCopy(obj) {
+            // 定义一个对象，用来确定当前的参数是数组还是对象
+            // 此方法 检查 是否是数组
+            // console.log(Object.prototype.toString.call(arr) === '[object Array]'); // true
+            // var objArray = Array.isArray(obj) ? [] : {};
+            function isArrayFn(val) {
+                if( typeof Array.isArray === 'function') {
+                    return Array.isArray(val);
+                }else{
+                    return Object.prototype.toString.call(val) === '[object Array]'
+                }
+            }
+            var objArray = isArrayFn(obj) ? [] : {};
+            if(obj && typeof obj === 'object') {
+                for (key in obj) {
+                    if(obj.hasOwnProperty(key)) {
+                        // 如果 obj 的子元素是对象， 递归操作
+                        if(obj[key] && typeof obj[key] === 'object'){
+                            objArray[key] = deepCopy(obj[key]);
+                        }else{
+                            // 如果不是，直接赋值
+                            objArray[key] = obj[key];
+                        }
+                    }
+                }
+            }
+            return objArray; // 返回新的对象
+        }
+        var obj1 = {
+            fruits: ['apple', 'banner'],
+            num: 100 
+        }
+        var obj2 = deepCopy(obj1);
+        obj2.fruits[0] = 'orange';
+        console.log(obj1.fruits[0]); // orange
+        console.log(obj2.fruits[0]);
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>7-利用 JSON 深拷贝</title>
+</head>
+<body>
+    <script>
+        var test = {a:'a', b: {q:[1, 2, 3],b:'b'}} 
+        var result = JSON.parse(JSON.stringify(test))
+        console.log(test);
+        console.log(result)
+        console.log('------------------')
+        console.log(result.b.q[1] = 3)
+        console.log(test.b.q[1])
+        
+    </script>
+</body>
+</html>
